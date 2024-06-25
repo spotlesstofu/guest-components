@@ -16,7 +16,7 @@ COPY . .
 RUN cargo build --release -p coco_keyprovider
 RUN mv target/release/coco_keyprovider .
 
-FROM golang:1.21.6-bookworm as skopeo
+FROM golang:1.22.4-bookworm as skopeo
 RUN apt-get update && apt-get install -y \
 	make\
 	libgpgme-dev \
